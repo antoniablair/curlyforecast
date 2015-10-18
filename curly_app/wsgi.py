@@ -7,10 +7,21 @@ For more information on this file, see
 https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
 """
 
-import os
+# import os
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "curly_app.settings")
 
+# from dj_static import Cling
+# from django.core.wsgi import get_wsgi_application
+# from whitenoise.django import DjangoWhiteNoise
+
+# application = Cling(get_wsgi_application())
+# application = DjangoWhiteNoise(application)
+
+import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "curly_app.settings")
 
-application = get_wsgi_application()
+from dj_static import Cling
+
+application = Cling(get_wsgi_application())

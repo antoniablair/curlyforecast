@@ -1,0 +1,1 @@
+web: gunicorn curly_app.wsgi --log-file -
