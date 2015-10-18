@@ -1,0 +1,106 @@
+body {
+  font-family: 'Roboto', 'Memphis', Arial, sans-serif;
+  background: url("../images/dark_embroidery.png");
+  margin-right: 30px!important;
+  text-align: center;
+}
+body h1 {
+  color: #CC3299;
+  margin-top: 50px;
+  top: 12px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Pacifico', cursive;
+  font-size: 44px;
+  display: block;
+  text-align: center;
+  text-shadow: 2px 2px #000000;
+  margin-bottom: 30px;
+}
+.dryer {
+  background: url("../images/dryer.svg");
+  width: 55px;
+  height: 45px;
+  position: absolute;
+  left: 125px;
+  top: 175px;
+  background-size: 60px 60px;
+}
+.cloudcat {
+  background: url("../images/cloudcat.svg");
+  width: 55px;
+  height: 60;
+  position: absolute;
+  right: 93;
+  top: 160px;
+  background-size: cover;
+}
+#recommendation {
+  text-align: center;
+  padding: 20px 60px 0px 60px;
+}
+#recommendation p {
+  font-size: 28px;
+  font-weight: bold;
+}
+#recommendation p.report {
+  font-size: 24px;
+}
+.container {
+  width: 100%;
+  padding-top: 4%;
+}
+.dashed-box {
+  display: block;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 15px;
+}
+.dashed-box-outer {
+  display: block;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 15px;
+  width: 100%;
+  padding: 10px;
+  border-color: #AC2B87;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 15px;
+}
+.dashed-box-inner {
+  display: block;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 15px;
+  border-color: #FAE471;
+  background-color: #34ABAC;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.btn.change-zipcode {
+  background: #238E23;
+  color: #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+p {
+  font-family: 'Roboto', 'Memphis', Arial, sans-serif;
+  display: block;
+  font-size: 24px;
+  padding: 10px;
+}
+.newcity {
+  font-size: 18px;
+  padding-bottom: 0px;
+}
+.looking-at {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #191919;
+  font-weight: 500;
+}

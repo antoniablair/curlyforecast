@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+  {% block body %}
+  	<div class="container-fluid">
+  		<div class="row">
+  			<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-lg-8 col-lg-offset-2">
+			  	<h1>{{ title }}</h1>
+			  	
+          <div class="dashed-box-outer">
+			  		<div class="dashed-box-inner">
+              {% if humidity %}
+                {% include 'weather/includes/weather_report.html' %}
+                {% else %}
+                  <div id="recommendation">
+                    <div class="dryer">
+                    </div>
+                    <p>How should you wear your hair today?</p>
+                    <div class="cloudcat">
+                    </div>
+                  </div>
+                {% endif %}
+
+                {% if humidity %}
+                <p class="newcity">Enter a new city.</p>
+                {% else %}
+		  					<p>Enter your city to get a weather forecast!</p>
+                {% endif %}
+                <div class="form-group">
+                  <form action="/" method="POST">
+                  {% csrf_token %}
+                  {{ form }}
+                  <button type="submit" value="Submit" class="btn btn-success"/>Get forecast</button>
+                  </form>
+                </div>
+
+			  		</div>
+			  	</div>
+
+			  </div>
+		  </div>
+	  </div>
+  {% endblock %}
