@@ -17,63 +17,80 @@ body h1 {
   text-align: center;
   text-shadow: 2px 2px #000000;
   margin-bottom: 30px;
+  line-height: 140%;
+}
+@media (min-width: 1200px) {
+  body h1 {
+    line-height: 100%;
+  }
+}
+.icon-wrapper {
+  width: 100%;
 }
 .dryer {
   background: url("../images/dryer.svg");
   width: 55px;
   height: 45px;
-  position: absolute;
-  left: 125px;
-  top: 175px;
+  display: inline-block;
   background-size: 60px 60px;
+  top: 20px;
 }
 .cloudcat {
   background: url("../images/cloudcat.svg");
   width: 55px;
   height: 60;
-  position: absolute;
-  right: 93;
-  top: 160px;
+  display: inline-block;
+  top: 5px;
   background-size: cover;
 }
 #recommendation {
+  padding: 20px 20px 0px 20px;
   text-align: center;
-  padding: 20px 60px 0px 60px;
+  position: relative;
 }
 #recommendation p {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
 }
 #recommendation p.report {
   font-size: 24px;
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .container {
   width: 100%;
   padding-top: 4%;
 }
 .dashed-box {
-  display: block;
   border-style: dashed;
   border-width: 2px;
   border-radius: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+  display: block;
 }
 .dashed-box-outer {
-  display: block;
   border-style: dashed;
   border-width: 2px;
   border-radius: 15px;
+  max-width: 600px;
+  display: block;
   width: 100%;
   padding: 10px;
   border-color: #AC2B87;
   margin-left: auto;
   margin-right: auto;
-  margin: 15px;
 }
 .dashed-box-inner {
-  display: block;
   border-style: dashed;
   border-width: 2px;
   border-radius: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 600px;
+  display: block;
   border-color: #FAE471;
   background-color: #34ABAC;
   padding-left: 20px;
@@ -95,7 +112,7 @@ p {
   padding: 10px;
 }
 .newcity {
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 0px;
 }
 .looking-at {

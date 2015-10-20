@@ -1,3 +1,5 @@
+@import "variables";
+
 @font-stack: 'Futura', sans-serif;
 @bodytext: 'Roboto', 'Memphis', Arial, sans-serif;
 @cursive: 'Pacifico', cursive;
@@ -21,51 +23,68 @@ body {
 	text-align: center;
 
 	h1 {
-	color: @pink;
-	margin-top: 50px;
-	top: 12px;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	font-family: @cursive;
-	font-size: 44px;
-	display: block;
-	text-align: center;
-	text-shadow: 2px 2px @black;
-	margin-bottom: 30px;
+		color: @pink;
+		margin-top: 50px;
+		top: 12px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		font-family: @cursive;
+		font-size: 44px;
+		display: block;
+		text-align: center;
+		text-shadow: 2px 2px @black;
+		margin-bottom: 30px;
+		line-height: 140%;
+		@media (min-width: @screen-lg-min) {
+			line-height: 100%;
+		}
 	}
 }
+
+.icon-wrapper {
+	width: 100%;
+}
+
+@dryer-top: 20px;
+@cloud-cat-top: @dryer-top - 15px;
 
 .dryer {
 	background: url("../images/dryer.svg");
 	width: 55px;
 	height: 45px;
-	position: absolute;
-	left: 125px;
-	top: 175px;
+	display: inline-block;
 	background-size: 60px 60px;
+	top: @dryer-top;
 }
 
 .cloudcat {
 	background: url("../images/cloudcat.svg");
 	width: 55px;
 	height: 60;
-	position: absolute;
-	right: 93;
-	top: 160px;
+	display: inline-block;
+	top: @cloud-cat-top;
 	background-size: cover;
 }
 
 #recommendation {
-	p {
-		font-size: 28px;
-		font-weight: bold;
-	}
-	p.report {
-		font-size: 24px;
-	}
+	padding: 20px 20px 0px 20px;
 	text-align: center;
-	padding: 20px 60px 0px 60px;
+	position: relative;
+
+	p {
+		font-size: 32px;
+		font-weight: bold;
+		&.report {
+			font-size: 24px;
+			max-width: 400px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+	// @media (min-width: @screen-md-min) {
+	// 	padding: 20px 60px 0px 60px;
+	// }
 }
 
 .container {
@@ -78,6 +97,10 @@ body {
 	border-style: dashed;
 	border-width: 2px;
 	border-radius: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 600px;
+	display: block;
 }
 
 .dashed-box-outer{
@@ -87,7 +110,6 @@ body {
 	border-color: @magenta;
 	margin-left: auto;
 	margin-right: auto;
-	margin: 15px;
 }
 
 .dashed-box-inner {

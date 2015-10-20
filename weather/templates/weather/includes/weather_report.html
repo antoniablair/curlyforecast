@@ -1,10 +1,13 @@
 <div id="recommendation">
-  <div class="dryer">
+  <div class="icon-wrapper">
+    <div class="dryer">
+    </div>
+    <div class="cloudcat">
+    </div>
   </div>
-  <p>Your Forecast</p>
-  <div class="cloudcat">
-  </div>
+  <p>{{ headline }}</p>
   <p class="report">
-    The humidity is now {{ humidity }}&deg;, with a wind speed of {{wind_speed}}. General forecast shows {{general}}.
+    {{ subheadline }}
+    The humidity is now {{ humidity }}%, with a wind speed of {{wind_speed}}. General forecast shows {{general}}.
   </p>
 </div>

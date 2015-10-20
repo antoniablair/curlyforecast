@@ -36,6 +36,21 @@ def get_weather(request):
             humidity = json_obj['main']['humidity']
             general = json_obj['weather'][0]['description']
             wind_speed = json_obj['wind']['speed']
+            headline = 'Go curly OR straight!'
+            subheadline = 'The weather is pretty in-between, so rock whatever hairstyle you want to.'
+
+            if humidity > 50 and wind_speed > 10:
+                headline = 'Wear it straight.'
+                subheadline = '''Even though it is humid, the wind will mess up your hair.
+                              '''
+
+            elif humidity > 50 and wind_speed < 10:
+                headline = 'Wear it curly!'
+                subheadline = "It's humid out but not too windy!"
+
+            elif wind_speed > 11:
+                headline = 'Wear a ponytail!'
+                subheadline = "It's pretty windy today, so wear your hair up!"
 
             # csrf token update
             c = {}
@@ -46,6 +61,8 @@ def get_weather(request):
                        'humidity': humidity,
                        'general': general,
                        'wind_speed': wind_speed,
+                       'headline': headline,
+                       'subheadline': subheadline,
                        }
     else:
         # If loading the page without submitting a form, create a form.
